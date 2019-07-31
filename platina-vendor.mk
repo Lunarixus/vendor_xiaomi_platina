@@ -1,4 +1,4 @@
-# Copyright (C) 2018-2019 The MoKee Open Source Project
+# Copyright (C) 2018-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,6 +19,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/bin/wfdservice:system/bin/wfdservice \
     vendor/xiaomi/platina/proprietary/etc/dpm/dpm.conf:system/etc/dpm/dpm.conf \
     vendor/xiaomi/platina/proprietary/etc/init/dpmd.rc:system/etc/init/dpmd.rc \
+    vendor/xiaomi/platina/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc \
     vendor/xiaomi/platina/proprietary/etc/init/wfdservice.rc:system/etc/init/wfdservice.rc \
     vendor/xiaomi/platina/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
     vendor/xiaomi/platina/proprietary/etc/permissions/com.qti.dpmframework.xml:system/etc/permissions/com.qti.dpmframework.xml \
@@ -117,6 +118,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/lib64/libwfdnative.so:system/lib64/libwfdnative.so \
     vendor/xiaomi/platina/proprietary/lib64/vendor.qti.esepowermanager@1.0.so:system/lib64/vendor.qti.esepowermanager@1.0.so \
     vendor/xiaomi/platina/proprietary/lib64/vendor.qti.hardware.vpp@1.1.so:system/lib64/vendor.qti.hardware.vpp@1.1.so \
+    vendor/xiaomi/platina/proprietary/vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.mlipay@1.0.so \
+    vendor/xiaomi/platina/proprietary/vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.mlipay@1.1.so \
     vendor/xiaomi/platina/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/xiaomi/platina/proprietary/vendor/bin/DR_AP_Service:$(TARGET_COPY_OUT_VENDOR)/bin/DR_AP_Service \
     vendor/xiaomi/platina/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
@@ -150,6 +153,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/vendor/bin/irsc_util:$(TARGET_COPY_OUT_VENDOR)/bin/irsc_util \
     vendor/xiaomi/platina/proprietary/vendor/bin/loc_launcher:$(TARGET_COPY_OUT_VENDOR)/bin/loc_launcher \
     vendor/xiaomi/platina/proprietary/vendor/bin/lowi-server:$(TARGET_COPY_OUT_VENDOR)/bin/lowi-server \
+    vendor/xiaomi/platina/proprietary/vendor/bin/mlipayd@1.1:$(TARGET_COPY_OUT_VENDOR)/bin/mlipayd@1.1 \
     vendor/xiaomi/platina/proprietary/vendor/bin/mm-pp-dpps:$(TARGET_COPY_OUT_VENDOR)/bin/mm-pp-dpps \
     vendor/xiaomi/platina/proprietary/vendor/bin/msm_irqbalance:$(TARGET_COPY_OUT_VENDOR)/bin/msm_irqbalance \
     vendor/xiaomi/platina/proprietary/vendor/bin/netmgrd:$(TARGET_COPY_OUT_VENDOR)/bin/netmgrd \
@@ -462,6 +466,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/vendor/lib/libarcsoft_beautyshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_beautyshot.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libarcsoft_dualcam_refocus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_dualcam_refocus.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libarcsoft_high_dynamic_range.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_high_dynamic_range.so \
+    vendor/xiaomi/platina/proprietary/vendor/lib/libarcsoft_supernight.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_supernight.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudcal.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libaudio_log_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudio_log_utils.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libaudioalsa.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioalsa.so \
@@ -1448,6 +1453,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_cpp_snapshot_downscale.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_cpp_snapshot_downscale.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_cpp_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_cpp_snapshot_hdr.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_cpp_snapshot_hht.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_cpp_snapshot_hht.so \
+    vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_cpp_snapshot_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_cpp_snapshot_sn.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_cpp_snapshot_sr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_cpp_snapshot_sr.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_cpp_snapshot_upscale.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_cpp_snapshot_upscale.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_cpp_video.so \
@@ -1458,6 +1464,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_default_video.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_default_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_default_video_3a.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_fullsize_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_fullsize_preview_3a.so \
+    vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_fullsize_preview_3a_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_fullsize_preview_3a_sn.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_fullsize_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_fullsize_video_3a.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_hfr_120.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_hfr_120_3a.so \
@@ -1472,6 +1479,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_snapshot.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_snapshot_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_snapshot_bokeh.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_snapshot_panorama.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_snapshot_panorama.so \
+    vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_snapshot_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_snapshot_sn.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_video.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_video_4k.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_ofilm_video_weixin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_ofilm_video_weixin.so \
@@ -1493,6 +1501,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_cpp_snapshot_downscale.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_cpp_snapshot_downscale.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_cpp_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_cpp_snapshot_hdr.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_cpp_snapshot_hht.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_cpp_snapshot_hht.so \
+    vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_cpp_snapshot_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_cpp_snapshot_sn.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_cpp_snapshot_sr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_cpp_snapshot_sr.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_cpp_snapshot_upscale.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_cpp_snapshot_upscale.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_cpp_video.so \
@@ -1503,6 +1512,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_default_video.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_default_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_default_video_3a.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_fullsize_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_fullsize_preview_3a.so \
+    vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_fullsize_preview_3a_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_fullsize_preview_3a_sn.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_fullsize_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_fullsize_video_3a.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_1080p_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_1080p_preview_3a.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_1080p_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_1080p_video_3a.so \
@@ -1521,6 +1531,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_cpp_snapshot_downscale.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_cpp_snapshot_downscale.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_cpp_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_cpp_snapshot_hdr.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_cpp_snapshot_hht.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_cpp_snapshot_hht.so \
+    vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_cpp_snapshot_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_cpp_snapshot_sn.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_cpp_snapshot_sr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_cpp_snapshot_sr.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_cpp_snapshot_upscale.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_cpp_snapshot_upscale.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_cpp_video.so \
@@ -1531,6 +1542,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_default_video.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_default_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_default_video_3a.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_fullsize_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_fullsize_preview_3a.so \
+    vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_fullsize_preview_3a_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_fullsize_preview_3a_sn.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_fullsize_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_fullsize_video_3a.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_hfr_120.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_hfr_120_3a.so \
@@ -1545,6 +1557,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_snapshot.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_snapshot_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_snapshot_bokeh.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_snapshot_panorama.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_snapshot_panorama.so \
+    vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_snapshot_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_snapshot_sn.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_video.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_video_4k.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_global_video_weixin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_global_video_weixin.so \
@@ -1562,6 +1575,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_snapshot.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_snapshot_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_snapshot_bokeh.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_snapshot_panorama.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_snapshot_panorama.so \
+    vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_snapshot_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_snapshot_sn.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_video.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_video_4k.so \
     vendor/xiaomi/platina/proprietary/vendor/lib/libchromatix_platina_imx363_sunny_video_weixin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_platina_imx363_sunny_video_weixin.so \
@@ -2349,6 +2363,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/platina/proprietary/vendor/lib64/liblqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblqe.so \
     vendor/xiaomi/platina/proprietary/vendor/lib64/libmdmdetect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdmdetect.so \
     vendor/xiaomi/platina/proprietary/vendor/lib64/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdsprpc.so \
+    vendor/xiaomi/platina/proprietary/vendor/lib64/libmlipay@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmlipay@1.1.so \
     vendor/xiaomi/platina/proprietary/vendor/lib64/libmm-color-convertor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-color-convertor.so \
     vendor/xiaomi/platina/proprietary/vendor/lib64/libmmcamera2_frame_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_frame_algorithm.so \
     vendor/xiaomi/platina/proprietary/vendor/lib64/libmmcamera2_is.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_is.so \
